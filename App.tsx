@@ -1,4 +1,4 @@
-import {SafeAreaView} from 'react-native';
+import { SafeAreaView } from "react-native";
 
 function App(): JSX.Element {
   return <SafeAreaView></SafeAreaView>;
