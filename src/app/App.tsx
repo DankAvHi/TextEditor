@@ -8,8 +8,7 @@ import { useAppStyles } from "./App.styles";
 import { AppTopBar } from "../widgets";
 
 export const App = (): JSX.Element => {
-  const colorScheme = useColorScheme();
-  const styles = useAppStyles(colorScheme);
+  const { styles, colorScheme } = useAppStyles();
 
   return (
     <SafeAreaView style={styles.App}>
