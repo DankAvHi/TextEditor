@@ -3,7 +3,7 @@ import { StyleSheet, useColorScheme } from "react-native";
 export const useAppTopBarStyles = () => {
   const colorScheme = useColorScheme();
 
-  return StyleSheet.create({
+  const styles = StyleSheet.create({
     AppTopBar: {
       padding: 12,
 
@@ -14,4 +14,6 @@ export const useAppTopBarStyles = () => {
       fontSize: 24,
     },
   });
+
+  return { styles };
 };
