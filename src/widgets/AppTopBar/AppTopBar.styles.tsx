@@ -8,6 +8,10 @@ export const useAppTopBarStyles = () => {
       padding: 12,
 
       backgroundColor: colorScheme === "dark" ? "white" : "black",
+
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
     },
     fileName: {
       color: colorScheme === "dark" ? "black" : "white",
