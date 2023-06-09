@@ -3,15 +3,24 @@ import { createContext, useContext, useState } from "react";
 type AppContextType = {
   isFileHaveChanges: boolean;
   setIsFileHaveChanges: React.Dispatch<React.SetStateAction<boolean>>;
+  editableFileName: string;
+  setEditableFileName: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const AppContext = createContext<AppContextType | null>(null);
 
 export const AppProvider = ({ children }: { children: JSX.Element }) => {
   const [isFileHaveChanges, setIsFileHaveChanges] = useState(false);
+  const [editableFileName, setEditableFileName] = useState("Untitled");
 
   return (
-    <AppContext.Provider value={{ isFileHaveChanges, setIsFileHaveChanges }}>
+    <AppContext.Provider
+      value={{
+        isFileHaveChanges,
+        setIsFileHaveChanges,
+        editableFileName,
+        setEditableFileName,
+      }}>
       {children}
     </AppContext.Provider>
   );
